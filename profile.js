@@ -1,48 +1,44 @@
 const prgressEL = document.querySelector('.progress')
 const navbar = document.querySelector('nav')
-const phoneTap = document.querySelector('.fa-phone')
-const emailTap = document.querySelector('.fa-envelope')
-const skillTap = document.querySelector('.skill')
-// window.onscroll = () => slzk()
-window.onscroll = () => scrollProgress()
-phoneTap.addEventListener("click", tell)
-emailTap.addEventListener("click", email)
-skillTap.addEventListener("click", skill)
+window.onscroll = () => slzk()
+// window.onscroll = () => scrollProgress()
 
-function scrollProgress() {
-    const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-    const scrollTop = document.documentElement.scrollTop
-    const scrollPercefntage = (scrollTop / pageHeight) * 100
-    // prgressEL.style.visibility = 'visible';
-    // prgressEL.style.width = scrollPercefntage + "%"
-    // prgressEL.style.width = scrollY + "%"
-    // console.log(scrollY);
+// function scrollProgress() {
+//     const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+//     const scrollTop = document.documentElement.scrollTop
+//     const scrollPercefntage = (scrollTop / pageHeight) * 100
+//     // prgressEL.style.visibility = 'visible';
+//     // prgressEL.style.width = scrollPercefntage + "%"
+//     // prgressEL.style.width = scrollY + "%"
+//     // console.log(scrollY);
 
-    if (scrollPercefntage >= 10) {
-        navbar.classList.add('activ')
-    } else {
-        navbar.classList.remove('activ')
-    }
-}
-
-// function slzk() {
-//     let top = scrollY
-//     if (top >= 200) {
+//     if (scrollPercefntage >= 10) {
 //         navbar.classList.add('activ')
 //     } else {
 //         navbar.classList.remove('activ')
-
 //     }
-
-//     console.log(top);
 // }
 
-function tell() {
-    alert("เบอร์ 0820538481")
+function slzk() {
+    var top = scrollY
+    console.log(top);
+    if (top >= 500) {
+        navbar.classList.add('activ')
+    } else {
+        navbar.classList.remove('activ')
+
+    }
 }
-function email() {
-    alert("email 644295034@parichat.ac.th")
+const work = () => {
+    alert("มีแต่การบ้าน")
 }
-function skill() {
-    alert("ไม่มีอะไรครับ ทำไว้เชยๆ")
+const skill = () => {
+    alert("ไม่มี")
+}
+
+const phone = () => {
+    alert("เบอร์ 082053XXXX")
+}
+const email = () => {
+    alert("Email : 644295034@parichat.skru.ac.th")
 }
